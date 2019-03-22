@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 import time
 
-def getWeather(city_name="北京", start_stamp=1514736000,dictum_msg='傻子多吃点',sweet_words='来自最爱你的我'):
+def getWeather(city_name="北京", start_stamp=1514736000):
     city_codes = JsonDict().jsonToDict()
     city_code = city_codes[city_name]
     url = "http://t.weather.sojson.com/api/weather/city/"+city_code
@@ -45,7 +45,7 @@ def getWeather(city_name="北京", start_stamp=1514736000,dictum_msg='傻子多�
         know_days = int ((time.time()-start_stamp)/86400)
         tell_msg = f'猪猪啊， 这是我们相识的第 {know_days} 天'
 
-        today_msg = f'{today_time}\n{tell_msg}。\n当前天气状况 : \n{nowtemperature}, {nowshidu}, {nowpm25}\n{notice}\n{temperature}\n{wind}\n{aqi}\n{dictum_msg}\n{sweet_words}\n'
+        today_msg = f'{today_time}\n{tell_msg}。\n当前天气状况 : \n{nowtemperature}, {nowshidu}, {nowpm25}\n{notice}\n{temperature}\n{wind}\n{aqi}\n'
         return today_msg
 
 
