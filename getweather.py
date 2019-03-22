@@ -5,6 +5,12 @@ from datetime import datetime
 import time
 
 def getWeather(city_name="北京", start_stamp=1514736000):
+    '''
+    获得天气信息并计算相识多少天
+    :param city_name:
+    :param start_stamp:
+    :return:
+    '''
     city_codes = JsonDict().jsonToDict()
     city_code = city_codes[city_name]
     url = "http://t.weather.sojson.com/api/weather/city/"+city_code
@@ -43,7 +49,7 @@ def getWeather(city_name="北京", start_stamp=1514736000):
         aqi = f"空气 : {aqi}"
         # 相识多少天了
         know_days = int ((time.time()-start_stamp)/86400)
-        tell_msg = f'猪猪啊， 这是我们相识的第 {know_days} 天'
+        tell_msg = f'这是我们相识的第 {know_days} 天'
 
         today_msg = f'{today_time}\n{tell_msg}。\n当前天气状况 : \n{nowtemperature}, {nowshidu}, {nowpm25}\n{notice}\n{temperature}\n{wind}\n{aqi}\n'
         return today_msg
@@ -51,10 +57,3 @@ def getWeather(city_name="北京", start_stamp=1514736000):
 
 
 
-
-
-
-
-
-if __name__ == '__main__':
-    print(getWeather("洛阳"))

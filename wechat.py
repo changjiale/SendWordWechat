@@ -1,7 +1,13 @@
 import itchat
 from setting import *
+'''
+通过二维码登录微信，判断登录状态，定位好友
+'''
 class Wechat():
 
+    '''
+    初始化
+    '''
     def __init__(self):
         self.friend_name = friend_dict['wechat_name']
         self.alarm_hour = friend_dict['alarm_time']
@@ -44,13 +50,16 @@ class Wechat():
             return False
 
     def getfriend(self):
+        '''
+        获取指定好友
+        :return:   好友uuid
+        '''
         if not self.isonline(True):
             return
         friend = itchat.search_friends(name=self.friend_name)
         if not friend:
             print('昵称错误')
             return
-        print(friend,"11")
         name_uuid = friend[0].get('UserName')
         friends={}
         friends['name_uuid'] = name_uuid
