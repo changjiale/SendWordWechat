@@ -26,18 +26,27 @@ Github: [python+itchat自动发送暖心话给指定微信好友](python+itchat�
 
 ### 数据来源
 暖心话来源  [情话网](http://www.ainicr.cn/qh/t83.html)
+
 天气预报接口  http://t.weather.sojson.com/api/weather/city/+city_code (ps：citycode[下载地址](https://github.com/changjiale/SendWordWechat/blob/master/utils/city_code.json))
 
 
 ## 项目模块说明
 utils
+
   -city_code.json #城市对应的citycode(编号)
+  
   -jsonToDict.py  #将city.code.json中的城市名称和编号提取 存储到dict中
+  
 getwheater.py     #通过citycode 获取当天天气情况
+
 getword.py        #获取一段暖言
+
 wechat.py         #调用接口发送内容给微信指定好友
+
 setting.py        #设置基本信息(好友名称, 定时任务时间， 所在城市， 相识时间， 最后留言等)
+
 scheduler.py      #调用各模块，设置定时任务
+
 run.py            #程序执行入口
 
 ## 最后呢，烦请各位看官，给个star呗
