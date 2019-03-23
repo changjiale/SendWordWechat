@@ -20,9 +20,9 @@ def scheduler():
         hour = int(list[0])
         minute = int(list[1])
     #启动定时器
-    #scheduler.add_job(start_info, 'cron', hour=hour, minute=minute)
+    scheduler.add_job(start_info, 'cron', hour=hour, minute=minute)
     # 每隔30秒发送一条数据用于测试。
-    scheduler.add_job(start_info, 'interval', seconds=30)
+    #scheduler.add_job(start_info, 'interval', seconds=30)
     scheduler.start()
 
 #每次定时循环的任务

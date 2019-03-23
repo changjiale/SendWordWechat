@@ -7,7 +7,7 @@
 使用 pip install -r requirements.txt 安装所有依赖
 
 ### 项目运行
-在setting.py中设置参数， 运行run.py的主方法即可
+在setting.py中设置参数， 运行run.py的主方法即可(ps: 为方便操作可以在scheduler.py启动测试任务,发送间隔在30s方便测试)
 
 ## 项目介绍：
 python+itchat自动发送暖心话给指定微信好友
@@ -49,5 +49,8 @@ scheduler.py      #调用各模块，设置定时任务
 
 run.py            #程序执行入口
 
+## 项目效果
+![命令行](https://github.com/changjiale/SendWordWechat/blob/master/demo.png)
+![微信端](https://github.com/changjiale/SendWordWechat/blob/master/wechat.png)
 ## 最后呢，烦请各位看官，给个star呗
 
