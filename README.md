@@ -13,7 +13,7 @@
 python+itchat自动发送暖心话给指定微信好友
 
 ### 项目地址
-Github: [python+itchat自动发送暖心话给指定微信好友](python+itchat自动发送暖心话给指定微信好友) 
+Github: [python+itchat自动发送暖心话给指定微信好友](https://github.com/changjiale/SendWordWechat) 
 
 ### 使用库
 - [itchat](https://github.com/littlecodersh/ItChat) - 微信个人号接口
